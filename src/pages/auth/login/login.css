@@ -1,0 +1,43 @@
+.login-container{
+    width:25rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 3px;
+    margin:4rem auto;
+}
+
+.login-header{
+    text-align: center;
+}
+
+.login-email{
+    color: var(--white-color);
+}
+
+.email-input{
+    padding:10px;
+    border-radius:8px;
+    border:transparent
+}
+
+.show-pass-input{
+    color:var(--primary-color)
+}
+
+.forgot-password{
+    color:var(--primary-color);
+    padding-left: 4rem;
+}
+
+
+.login-label{
+    text-decoration: none;
+    color:white
+}
+
+.create-acc-text{
+    color: var(--white-color);
+}
+
+.create-acc-head{
+    color:var(--primary-color);
+}
