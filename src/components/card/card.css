@@ -1,0 +1,15 @@
+.rating-comp{
+    list-style: none;
+    gap:0.5rem;
+    border:1px solid var(--gray-color);
+    padding:0.5rem;
+    border-radius: 0.2rem;
+    width:20%;
+    height:10%
+    
+}
+
+.star-icon{
+    font-size:1rem;
+    color:var(--white-color)
+}

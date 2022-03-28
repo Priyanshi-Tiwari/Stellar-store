@@ -1,0 +1,15 @@
+.category-link{
+    text-decoration:none
+}
+
+.category-wrapper{
+    
+    position: relative;
+    border-radius: 0.5rem;
+    width: 16.5rem;
+    height: 18rem;
+    border: 1px solid var(--gray-color);
+    align-self: center;
+    padding: 0rem
+      
+}

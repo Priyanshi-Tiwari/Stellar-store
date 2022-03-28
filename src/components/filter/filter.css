@@ -1,0 +1,16 @@
+.filter-container {
+    width: 25%;
+    border: 1px solid var(--gray-color);
+    padding: 2rem;
+    color: var(--white-color);
+  }
+  
+  .btn-clear {
+    width: 30%;
+    margin-left: 10rem;
+  }
+  
+  .price-values {
+    color: var(--gray-color);
+    padding: 0;
+  }
