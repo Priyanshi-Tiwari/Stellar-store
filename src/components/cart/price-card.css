@@ -1,0 +1,22 @@
+.check-out-text{
+    font-size: 1rem;
+    margin:0
+}
+
+.checkout-gap{
+    margin:1.5rem
+}
+
+.checkout-wrapper{
+    width:25rem;
+    margin-left:8rem;
+    position:sticky;
+    top:0;
+    align-self: flex-start;
+}
+
+
+.wishlist-header{
+    text-align: center;
+    font-size: 2rem;
+}

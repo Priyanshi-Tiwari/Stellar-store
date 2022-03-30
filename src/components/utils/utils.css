@@ -1,0 +1,53 @@
+.display-flex-center{
+    align-content: center;
+    justify-content: center;
+    display: flex;
+}
+
+.flex-center{
+    align-content: center;
+    justify-content: center;
+}
+
+.btn-primary-light{
+    background-color:var(--primary-color);
+    width:25rem;
+    color:white
+
+}
+
+.gap-sm{
+    gap:1rem;
+}
+
+.flex-wrap{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding:0
+  }
+
+
+.space-between{
+    justify-content:space-between
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    
+  }
+.grid-item {
+    text-align: center;
+  }
+
+.four-grid-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    
+  }
+
+.overflow{
+    overflow: auto;
+}

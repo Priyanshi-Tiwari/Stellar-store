@@ -1,13 +1,115 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://stark-ui.netlify.app/Stylesheets/main.css');
+@import url('./components/utils/utils.css');
+
+.nav-brand {
+  cursor: pointer;
+  padding: 0rem;
+}
+#root {
+  padding: 0;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.poster-container {
+  position: relative;
+}
+
+.banner-button {
+  position: absolute;
+  top: 20rem;
+  left: 80rem;
+  width: 8rem;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.poster{
+max-width: 100%;
+margin:0 auto;
+}
+
+.links-mr {
+  margin: 1rem 0rem;
+  padding: 0rem;
+}
+
+.cart-color {
+  color: var(--white-color);
+  font-size: 2.5rem;
+}
+
+.list-non-bullet {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.links {
+  padding: 0;
+}
+
+.primary-link,
+.links-secondary {
+  padding: 0.5rem;
+}
+.badge-container {
+  padding: 0rem;
+  width: 3rem;
+}
+
+
+.no-margin{
+  margin-bottom:0;
+}
+
+.red-icon {
+  left: 1.5rem;
+  top: -1.5rem;
+}
+
+.glass-icon-color {
+  font-size: 1.5rem;
+  color: var(--primary-color);
+}
+
+.search-container {
+  padding: 0rem;
+  border-radius: 2rem;
+  width: 60%;
+  height: 2.5rem;
+}
+
+.search-button {
+  border: 1rem transparent;
+}
+
+.input-bar {
+  border: 1rem transparent;
+  width: 100%;
+}
+
+.card-wrapper {
+  margin: 1rem;
+}
+
+.card-header-one {
+  text-align: left;
+  font-weight:bold;
+  font-size:1.2rem
+}
+
+.card-header-two {
+  text-align: left;
+}
+
+.footer {
+  padding: 0rem;
+}
+
+.margin-right{
+  margin-right: 0.5rem;
 }
