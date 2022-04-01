@@ -2,8 +2,21 @@ import React from 'react'
 import './card.css'
 import Header from "../../assets/camera.jpg"
 import { FaHeart } from "react-icons/fa";
+import { useWishlist } from '../../contexts/wishlist-context';
+import {Link} from 'react-router-dom';
 
 const Card = ({product}) => {
+
+const {wishlist,setWishlist}=useWishlist();
+
+function wishlistHandler(product){
+ if(wishlist.find(item => item._id === product._id)){
+   setWishlist(wishlist.filter(item=> item._id === product._id))
+ }
+ else{
+   setWishlist([...wishlist,product])
+ }
+}
   return (
     <>
         <div className="card-wrapper flex-col">
@@ -30,8 +43,9 @@ const Card = ({product}) => {
               <div className="discounted">{product.price}</div>
             </div>
             <div class="card-buttons flex-col gap-sm">
-            <a href="#" class="links primary-link stack">Add to cart</a>
-            <a href="#" class="links links-secondary stack">Wishlist</a>
+            <Link to="" class="links primary-link stack">Add to cart</Link>
+            <button class="links links-secondary stack"
+            onClick={()=>wishlistHandler(product)}>{wishlist.find(item => item._id === product._id)?"Remove from wishlist":"Add to wishlist"}</button>
           </div>
           </div>
         </div>
