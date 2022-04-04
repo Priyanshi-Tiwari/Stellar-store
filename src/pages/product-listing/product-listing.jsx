@@ -6,11 +6,10 @@ import { useProduct } from '../../contexts/product-data-context'
 import { useFilter } from '../../contexts/filter-context'
 import {sortedData, filteredData} from './utils'
 
+
 const ProductListing= () => {
   const{state}=useFilter();
-  console.log("filterstate",state)
   const {data}=useProduct();
-  console.log("productllist",data)
   const sortData=sortedData([...data],state.sort);
   const filterData=filteredData([...sortData],state)
   return (

@@ -1,4 +1,5 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
 
 const Navbar = () => {
   return (
@@ -19,22 +20,22 @@ const Navbar = () => {
       />
     </div>
     <li className="list-inline">
-      <a className="links link-active" href="./wishlist.html">
+      <Link className="links link-active" to="/wishlist">
           WishList
         
-      </a>
+      </Link>
     </li>
     <li className="list-inline">
-      <a className="links link-active" href="./cart-page.html">
+      <a className="links link-active" href="/cart-page">
         Cart
 
       </a>
     </li>
     <li className="list-inline">
-      <a className="links link-active" href="./product-listing.html">Products</a>
+      <a className="links link-active" href="/product-listing">Products</a>
     </li>
     <li className="list-inline">
-      <a className="links" href="./loginpage.html">Login</a>
+      <a className="links" href="/login">Login</a>
     </li>
   </ul>
 </nav>
