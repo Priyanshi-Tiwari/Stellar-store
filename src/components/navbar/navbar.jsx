@@ -26,16 +26,16 @@ const Navbar = () => {
       </Link>
     </li>
     <li className="list-inline">
-      <a className="links link-active" href="/cart-page">
+      <Link className="links link-active" to="/cart-page">
         Cart
 
-      </a>
+      </Link>
     </li>
     <li className="list-inline">
-      <a className="links link-active" href="/product-listing">Products</a>
+      <Link className="links link-active" to="/product-listing">Products</Link>
     </li>
     <li className="list-inline">
-      <a className="links" href="/login">Login</a>
+      <Link className="links" to="/login">Login</Link>
     </li>
   </ul>
 </nav>
