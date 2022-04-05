@@ -1,26 +1,34 @@
 import React from 'react'
 import './categories.css'
-import Header from "../../assets/camera.jpg"
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
+import { useFilter } from '../../contexts/filter-context'
 
 
-const Categories = () => {
+const Categories = ({item}) => {
+  const {dispatch}=useFilter();
+  const navigate=useNavigate();
+
+  function categoryHandler(name){
+   dispatch({type:"CATEGORIES",payload:name})
+   navigate("/product-listing")
+  }
   return (
-    <Link to='product-listing' className='category-link'>
-        <div className="flex-col category-wrapper">
+    
+        <div className="flex-col category-wrapper"
+        onClick={()=>categoryHandler(item.categoryName)}>
           <div className="center">
             <div className="image-conatiner">
               <img
                 className="card-image"
-                src={Header}
+                src={item.img}
                 alt="card-image"
               />
             </div>
-            <h2>Cameras</h2>
+            <h2>{item.categoryName}</h2>
             </div>
             </div>
 
-    </Link>
+    
   )
 }
 

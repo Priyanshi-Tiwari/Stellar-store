@@ -1,4 +1,4 @@
-import { v4 as uuid } from "uuid";
+import { v4 as uuid } from 'uuid';
 
 /**
  * Category Database can be added here.
@@ -8,20 +8,22 @@ import { v4 as uuid } from "uuid";
 export const categories = [
   {
     _id: uuid(),
-    categoryName: "fiction",
-    description:
-      "literature in the form of prose, especially novels, that describes imaginary events and people",
+    categoryName: 'laptops',
+    img: 'https://m.media-amazon.com/images/I/51FWf+esWHL._AC_SX679_.jpg',
   },
   {
     _id: uuid(),
-    categoryName: "non-fiction",
-    description:
-      "Non-fiction is writing that gives information or describes real events, rather than telling a story.",
+    categoryName: 'mobile-phones',
+    img: 'https://d28wu8o6itv89t.cloudfront.net/images/Realmeipng-1588598003732.png',
   },
   {
     _id: uuid(),
-    categoryName: "horror",
-    description:
-      "Meant to cause discomfort and fear for both the character and readers, horror writers often make use of supernatural and paranormal elements in morbid stories that are sometimes a little too realistic.",
+    categoryName: 'earphones',
+    img: 'https://static.toiimg.com/thumb/resizemode-4,msid-88473035,width-800,height-450,ver-75/88473035.jpg',
+  },
+  {
+    _id: uuid(),
+    categoryName: 'tabs',
+    img: 'https://img.us.news.samsung.com/us/wp-content/uploads/2021/08/03131111/Galaxy-Tab-S7_FE_MysticBlack_Front-1536x1024.jpg',
   },
 ];

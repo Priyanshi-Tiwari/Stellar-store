@@ -1,13 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link,useNavigate} from 'react-router-dom'
 
 const Navbar = () => {
+  const navigate=useNavigate();
   return (
     <>
     <nav className="navigation container nav-bar">
-  <a href="../index.html" className="links links-mr">
-    <div className="nav-brand">Stellar store</div>
-  </a>
+  <Link to="/" className="links links-mr">
+    <div  className="nav-brand">Stellar store</div>
+  </Link>
   <ul className="list-non-bullet list-align flex-row">
     <div className="flex-row search-container">
       <button className="list-non-bullet search-button">
