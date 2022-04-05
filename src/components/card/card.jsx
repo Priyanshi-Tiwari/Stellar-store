@@ -4,10 +4,14 @@ import Header from "../../assets/camera.jpg"
 import { FaHeart } from "react-icons/fa";
 import { useWishlist } from '../../contexts/wishlist-context';
 import {Link} from 'react-router-dom';
+import { useCart } from '../../contexts/cart-context';
+import { useNavigate } from 'react-router-dom';
 
 const Card = ({product}) => {
 
 const {wishlist,setWishlist}=useWishlist();
+const {cart,setCart}=useCart();
+const cartNavigate=useNavigate();
 
 function wishlistHandler(product){
  if(wishlist.find(item => item._id === product._id)){
@@ -16,6 +20,16 @@ function wishlistHandler(product){
  else{
    setWishlist([...wishlist,product])
  }
+}
+
+function cartHandler(product){
+  if(cart.find(item=>item._id===product._id)){
+    cartNavigate('/cart-page')
+  }
+  else{
+    setCart([...cart,product])
+  }
+
 }
   return (
     <>
@@ -31,7 +45,7 @@ function wishlistHandler(product){
              <div class="flex-row space-between">
             
             <div className="card-header-one">{product.name}</div>
-<div class="rating-comp flex-row display-flex-center">
+            <div class="rating-comp flex-row display-flex-center">
             <span class="star-icon">{product.rating}
             <FaHeart/>
             </span> 
@@ -40,10 +54,12 @@ function wishlistHandler(product){
 
             <div className="card-price flex-row space-between">
               <div className="new">Rs {product.discountedPrice}</div>
-              <div className="discounted">{product.price}</div>
+              <div className="discounted">Rs{product.price}</div>
             </div>
             <div class="card-buttons flex-col gap-sm">
-            <Link to="" class="links primary-link stack">Add to cart</Link>
+            <button class="links primary-link stack" onClick={()=>cartHandler(product)}>
+              {cart.find(item=>item._id===product._id)?"Go to cart":"Add to cart"}
+            </button>
             <button class="links links-secondary stack"
             onClick={()=>wishlistHandler(product)}>{wishlist.find(item => item._id === product._id)?"Remove from wishlist":"Add to wishlist"}</button>
           </div>

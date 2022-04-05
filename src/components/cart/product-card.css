@@ -2,14 +2,24 @@
     margin-top: -2rem;
     }
     
-    .quantity-header{
+.quantity-header{
     color:var(--white-color)
     }
     
-    .quant-input{
+.quant-input{
     width:1rem;
     
     }
+
+.product-wrapper{
+    height:30rem;
+    border-radius:0.5rem;
+    width:16.5rem;
+    border:1px solid var(--gray-color);
+    padding:0rem;
+    align-self:center;
+    margin:1rem
+}
     
     
 

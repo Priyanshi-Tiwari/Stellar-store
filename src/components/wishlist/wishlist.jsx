@@ -1,12 +1,25 @@
 import React from 'react'
 import { FaHeart } from "react-icons/fa";
+import { useDebugValue } from 'react/cjs/react.development';
+import { removeItemFromCartHandler } from '../../backend/controllers/CartController';
+import { useCart } from '../../contexts/cart-context';
 import { useWishlist } from '../../contexts/wishlist-context';
 
 
 const Wishlist = ({item}) => {
+  
   const{wishlist,setWishlist}=useWishlist();
+  const {cart,setCart}=useCart();
+
   function removeHandler(item){
     setWishlist(wishlist.filter((data)=>data._id!==item._id))
+  }
+
+  function addCartHandler(item){
+    const updatedCart=cart.map(value=>value._id===item._id?{...value,quantity:value.quantity+1}:{...value})
+    setCart([...updatedCart]);
+    setWishlist(wishlist.filter((data)=>data._id!==item._id))
+
   }
   
   return (
@@ -35,7 +48,7 @@ const Wishlist = ({item}) => {
           <div className="discounted">Rs{item.price}</div>
         </div>
         <div class="card-buttons flex-col gap-sm">
-        <a href="#" class="links primary-link stack">Add to cart</a>
+        <button class="links primary-link stack" onClick={()=>addCartHandler(item)}>Add to cart</button>
         <button onClick={()=>removeHandler(item)} class="links links-secondary stack">Remove from wishlist</button>
       </div>
       </div>

@@ -15,6 +15,7 @@ export const products = [
     discountedPrice: 30000,
     topProduct: true,
     categoryName: 'mobile-phones',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -25,6 +26,7 @@ export const products = [
     discountedPrice: 15000,
     topProduct: false,
     categoryName: 'mobile-phones',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -35,6 +37,7 @@ export const products = [
     discountedPrice: 25000,
     topProduct: false,
     categoryName: 'laptops',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -45,6 +48,7 @@ export const products = [
     discountedPrice: 55000,
     topProduct: true,
     categoryName: 'laptops',
+    quantity: 1,
   },
 
   {
@@ -56,6 +60,7 @@ export const products = [
     discountedPrice: 20000,
     topProduct: false,
     categoryName: 'laptops',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -66,6 +71,7 @@ export const products = [
     discountedPrice: 10000,
     topProduct: false,
     categoryName: 'mobile-phones',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -76,6 +82,7 @@ export const products = [
     discountedPrice: 800,
     topProduct: true,
     categoryName: 'earphones',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -86,6 +93,7 @@ export const products = [
     discountedPrice: 400,
     topProduct: false,
     categoryName: 'earphones',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -96,6 +104,7 @@ export const products = [
     discountedPrice: 10000,
     topProduct: true,
     categoryName: 'tabs',
+    quantity: 1,
   },
   {
     _id: uuid(),
@@ -106,5 +115,6 @@ export const products = [
     discountedPrice: 8000,
     topProduct: false,
     categoryName: 'tabs',
+    quantity: 1,
   },
 ];
