@@ -7,12 +7,10 @@ const ProductContext=createContext();
 
 const ProductProvider=({children})=>{
     const[data,setData]=useState([])
-    console.log("state",data)
-
+    
     useEffect(()=>{
     const fetch=async()=>{
     const result= await axios("/api/products");
-    console.log("result",result)
     setData(result.data.products)
 
      }

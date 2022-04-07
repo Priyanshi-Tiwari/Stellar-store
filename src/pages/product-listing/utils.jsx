@@ -10,7 +10,7 @@ const sortedData = (data, sort) => {
 
 const filteredData = (data, state) => {
   return data
-    .filter((product) => product.rating > state.rating)
+    .filter((product) => product.rating >= state.rating)
     .filter((product) =>
       state.filterPrice ? product.discountedPrice <= state.filterPrice : true
     )

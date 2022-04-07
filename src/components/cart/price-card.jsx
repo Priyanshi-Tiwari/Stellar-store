@@ -13,7 +13,9 @@ const PriceCard = () => {
         <h2 class="wishlist-header">Price Details</h2>
         <hr class="checkout-gap" />
         <div class="justify-content-sb dis-flex">
-          <p class="check-out-text">Price({cart.length} item)</p>
+          <p class="check-out-text">Price({cart.reduce((acc, curr) => {
+         return acc + curr.quantity;
+         }, 0)} item)</p>
           <p class="check-out-text">
          Rs{cart.reduce((acc, curr) => {
          return acc + curr.quantity * curr.price;
