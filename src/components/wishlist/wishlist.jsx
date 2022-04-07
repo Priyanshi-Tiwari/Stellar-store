@@ -16,9 +16,15 @@ const Wishlist = ({item}) => {
   }
 
   function addCartHandler(item){
+    if(cart.find(value=>value._id===item._id)){
     const updatedCart=cart.map(value=>value._id===item._id?{...value,quantity:value.quantity+1}:{...value})
     setCart([...updatedCart]);
     setWishlist(wishlist.filter((data)=>data._id!==item._id))
+    }
+    else{
+      setCart([...cart,item]);
+      setWishlist(wishlist.filter((data)=>data._id!==item._id))
+    }
 
   }
   
